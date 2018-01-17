@@ -1,5 +1,7 @@
 package com.example.anmol.childmonitor.otpVerification
 
+import android.content.Context
+
 
 interface otpMVP{
 
@@ -18,8 +20,8 @@ interface otpMVP{
 
     //Model
     interface model{
-        fun sendSMS()
-        fun recieveSMS()
+        fun sendSMS(ph:String,otp:String,ct: Context)
+        fun recieveSMS():Int
     }
 
 }
